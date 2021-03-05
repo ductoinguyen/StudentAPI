@@ -1,11 +1,13 @@
 from flask import Flask, request, jsonify, render_template
 import os
+import json
+import time
 import datetime
 
 students = [{
   "id": "18021292",
   "name": "Nguyễn Đức Tới",
-  "birthday": datetime.datetime(2000, 9, 8),
+  "birthday": "2000-09-08",
   "gender": "Nam",
   "emails": {
     "vnuemai": "18021292@vnu.edu.vn",
@@ -18,7 +20,7 @@ students = [{
 }, {
   "id": "18021318",
   "name": "Vũ Thành Trung",
-  "birthday": datetime.datetime(2000, 4, 9),
+  "birthday": "2000-09-04",
   "gender": "Nam",
   "emails": {
     "vnuemai": "18021318@vnu.edu.vn",
@@ -31,7 +33,7 @@ students = [{
 }, {
   "id": "18020419",
   "name": "Nguyễn Hùng Duy",
-  "birthday": datetime.datetime(2000, 5, 29),
+  "birthday": "2000-05-29",
   "gender": "Nam",
   "emails": {
     "vnuemai": "18020419@vnu.edu.vn",
@@ -47,14 +49,16 @@ app = Flask(__name__)
 
 @app.route("/students", methods=["GET"])
 def getStudents():
-  return students
+  global students
+  return app.response_class(json.dumps(students),mimetype='application/json')
 
 @app.route("/student/<id>", methods=["GET"])
 def getStudent(id):
+  global students
   for student in students:
     if student["id"] == id:
-      return student
-  return dict()
+      return app.response_class(json.dumps(student),mimetype='application/json')
+  return app.response_class(json.dumps([]),mimetype='application/json')
 
 if __name__ == "__main__":
   app.run(debug=True)
