@@ -395,15 +395,21 @@ students = [{
     {"name": "GSH", "phone": "0768767732"},
   ]
 }]
-
-app = Flask(__name__)
+from flask_cors import CORS, cross_origin
+TEMPLATE_DIR = os.path.abspath('./templates')
+STATIC_DIR = os.path.abspath('./static')
+app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route("/students", methods=["GET"])
+@cross_origin()
 def getStudents():
   global students
   return app.response_class(json.dumps(students),mimetype='application/json')
 
 @app.route("/student/<id>", methods=["GET"])
+@cross_origin()
 def getStudent(id):
   global students
   for student in students:
@@ -412,4 +418,4 @@ def getStudent(id):
   return app.response_class(json.dumps([]),mimetype='application/json')
 
 if __name__ == "__main__":
-  app.run(debug=True)
+  app.run(debug=True, port=8000)
