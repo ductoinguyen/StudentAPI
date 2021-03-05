@@ -44,7 +44,7 @@ students = [{
     {"name": "GSH", "phone": "0768767732"},
   ]
 }, {
-  "id": "18021292",
+  "id": "18021293",
   "name": "Nguyễn Đức Tới",
   "birthday": "2000-09-08",
   "gender": "Nam",
@@ -57,7 +57,7 @@ students = [{
     {"name": "XYZ", "phone": "0639273682"},
   ]
 }, {
-  "id": "18021318",
+  "id": "18021319",
   "name": "Vũ Thành Trung",
   "birthday": "2000-09-04",
   "gender": "Nam",
@@ -70,7 +70,7 @@ students = [{
     {"name": "KLM", "phone": "0456782672"},
   ]
 }, {
-  "id": "18020419",
+  "id": "12025792",
   "name": "Nguyễn Hùng Duy",
   "birthday": "2000-05-29",
   "gender": "Nam",
@@ -83,7 +83,7 @@ students = [{
     {"name": "GSH", "phone": "0768767732"},
   ]
 }, {
-  "id": "18021292",
+  "id": "23456821",
   "name": "Nguyễn Đức Tới",
   "birthday": "2000-09-08",
   "gender": "Nam",
@@ -96,7 +96,7 @@ students = [{
     {"name": "XYZ", "phone": "0639273682"},
   ]
 }, {
-  "id": "18021318",
+  "id": "35467",
   "name": "Vũ Thành Trung",
   "birthday": "2000-09-04",
   "gender": "Nam",
@@ -109,7 +109,7 @@ students = [{
     {"name": "KLM", "phone": "0456782672"},
   ]
 }, {
-  "id": "18020419",
+  "id": "45678",
   "name": "Nguyễn Hùng Duy",
   "birthday": "2000-05-29",
   "gender": "Nam",
@@ -122,7 +122,7 @@ students = [{
     {"name": "GSH", "phone": "0768767732"},
   ]
 }, {
-  "id": "18021292",
+  "id": "5467",
   "name": "Nguyễn Đức Tới",
   "birthday": "2000-09-08",
   "gender": "Nam",
@@ -135,7 +135,7 @@ students = [{
     {"name": "XYZ", "phone": "0639273682"},
   ]
 }, {
-  "id": "18021318",
+  "id": "456782",
   "name": "Vũ Thành Trung",
   "birthday": "2000-09-04",
   "gender": "Nam",
@@ -148,7 +148,7 @@ students = [{
     {"name": "KLM", "phone": "0456782672"},
   ]
 }, {
-  "id": "18020419",
+  "id": "456678",
   "name": "Nguyễn Hùng Duy",
   "birthday": "2000-05-29",
   "gender": "Nam",
@@ -161,7 +161,7 @@ students = [{
     {"name": "GSH", "phone": "0768767732"},
   ]
 }, {
-  "id": "18021292",
+  "id": "45677890",
   "name": "Nguyễn Đức Tới",
   "birthday": "2000-09-08",
   "gender": "Nam",
@@ -174,7 +174,7 @@ students = [{
     {"name": "XYZ", "phone": "0639273682"},
   ]
 }, {
-  "id": "18021318",
+  "id": "8744",
   "name": "Vũ Thành Trung",
   "birthday": "2000-09-04",
   "gender": "Nam",
@@ -187,7 +187,7 @@ students = [{
     {"name": "KLM", "phone": "0456782672"},
   ]
 }, {
-  "id": "18020419",
+  "id": "34567",
   "name": "Nguyễn Hùng Duy",
   "birthday": "2000-05-29",
   "gender": "Nam",
@@ -200,7 +200,7 @@ students = [{
     {"name": "GSH", "phone": "0768767732"},
   ]
 }, {
-  "id": "18021292",
+  "id": "4567890",
   "name": "Nguyễn Đức Tới",
   "birthday": "2000-09-08",
   "gender": "Nam",
@@ -213,7 +213,7 @@ students = [{
     {"name": "XYZ", "phone": "0639273682"},
   ]
 }, {
-  "id": "18021318",
+  "id": "456789234",
   "name": "Vũ Thành Trung",
   "birthday": "2000-09-04",
   "gender": "Nam",
@@ -226,7 +226,7 @@ students = [{
     {"name": "KLM", "phone": "0456782672"},
   ]
 }, {
-  "id": "18020419",
+  "id": "567123",
   "name": "Nguyễn Hùng Duy",
   "birthday": "2000-05-29",
   "gender": "Nam",
@@ -239,7 +239,7 @@ students = [{
     {"name": "GSH", "phone": "0768767732"},
   ]
 }, {
-  "id": "18021292",
+  "id": "7824629",
   "name": "Nguyễn Đức Tới",
   "birthday": "2000-09-08",
   "gender": "Nam",
@@ -252,7 +252,7 @@ students = [{
     {"name": "XYZ", "phone": "0639273682"},
   ]
 }, {
-  "id": "18021318",
+  "id": "8723821",
   "name": "Vũ Thành Trung",
   "birthday": "2000-09-04",
   "gender": "Nam",
@@ -418,4 +418,4 @@ def getStudent(id):
   return app.response_class(json.dumps([]),mimetype='application/json')
 
 if __name__ == "__main__":
-  app.run(debug=True, port=8000)
+  app.run(debug=True, host="127.0.0.5", port=1212)
